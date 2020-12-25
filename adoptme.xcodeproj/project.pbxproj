@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -28,6 +28,8 @@
 		C94637C0248D50400083F7AA /* chameleon-isaac.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C94637B6248D50400083F7AA /* chameleon-isaac.jpg */; };
 		C96A3B66248C7B2A00973E2A /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96A3B65248C7B2A00973E2A /* HomeScreen.swift */; };
 		C96A3B6B248C7B3000973E2A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C96A3B6A248C7B3000973E2A /* Preview Assets.xcassets */; };
+		C97E0F7E2596207100406D7D /* Cleanse in Frameworks */ = {isa = PBXBuildFile; productRef = C97E0F7D2596207100406D7D /* Cleanse */; };
+		C97E0F822596224200406D7D /* AppComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97E0F812596224200406D7D /* AppComponent.swift */; };
 		C97E6449248D303600BC15AC /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97E6448248D303600BC15AC /* Data.swift */; };
 		C97E644B248D304900BC15AC /* Pet.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97E644A248D304900BC15AC /* Pet.swift */; };
 		C97E644D248D305200BC15AC /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97E644C248D305200BC15AC /* UserData.swift */; };
@@ -76,6 +78,7 @@
 		C96A3B65248C7B2A00973E2A /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
 		C96A3B6A248C7B3000973E2A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		C96A3B6F248C7B3000973E2A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C97E0F812596224200406D7D /* AppComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppComponent.swift; sourceTree = "<group>"; };
 		C97E6448248D303600BC15AC /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		C97E644A248D304900BC15AC /* Pet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pet.swift; sourceTree = "<group>"; };
 		C97E644C248D305200BC15AC /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
@@ -92,6 +95,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C97E0F7E2596207100406D7D /* Cleanse in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -142,6 +146,7 @@
 		C96A3B60248C7B2A00973E2A /* adoptme */ = {
 			isa = PBXGroup;
 			children = (
+				C97E0F802596215F00406D7D /* DI */,
 				C92D23A82595DD070089AAEC /* App */,
 				C92D23A72595DCDC0089AAEC /* SupportingFiles */,
 				C97E6447248D302B00BC15AC /* Models */,
@@ -158,6 +163,14 @@
 				C96A3B6A248C7B3000973E2A /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		C97E0F802596215F00406D7D /* DI */ = {
+			isa = PBXGroup;
+			children = (
+				C97E0F812596224200406D7D /* AppComponent.swift */,
+			);
+			path = DI;
 			sourceTree = "<group>";
 		};
 		C97E6447248D302B00BC15AC /* Models */ = {
@@ -241,6 +254,9 @@
 			dependencies = (
 			);
 			name = adoptme;
+			packageProductDependencies = (
+				C97E0F7D2596207100406D7D /* Cleanse */,
+			);
 			productName = Exam1;
 			productReference = C96A3B5E248C7B2A00973E2A /* adoptme.app */;
 			productType = "com.apple.product-type.application";
@@ -252,7 +268,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1150;
-				LastUpgradeCheck = 1150;
+				LastUpgradeCheck = 1220;
 				ORGANIZATIONNAME = "Abdul Chathil";
 				TargetAttributes = {
 					C96A3B5D248C7B2A00973E2A = {
@@ -269,6 +285,9 @@
 				Base,
 			);
 			mainGroup = C96A3B55248C7B2A00973E2A;
+			packageReferences = (
+				C97E0F7C2596207100406D7D /* XCRemoteSwiftPackageReference "Cleanse" */,
+			);
 			productRefGroup = C96A3B5F248C7B2A00973E2A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -310,6 +329,7 @@
 				C92994D8248E477F008A3A2C /* ProgressBar.swift in Sources */,
 				C97E644B248D304900BC15AC /* Pet.swift in Sources */,
 				C92994D0248E0E47008A3A2C /* PetBadge.swift in Sources */,
+				C97E0F822596224200406D7D /* AppComponent.swift in Sources */,
 				C9E41AB1248EA091008652F0 /* ImageStore.swift in Sources */,
 				C92994DE248E6E72008A3A2C /* User.swift in Sources */,
 				C97E646D248D41B200BC15AC /* PetRow.swift in Sources */,
@@ -354,6 +374,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -414,6 +435,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -449,7 +471,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"adoptme/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = adoptme/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/adoptme/SupportingFiles/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -469,7 +491,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"adoptme/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = adoptme/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/adoptme/SupportingFiles/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -504,6 +526,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		C97E0F7C2596207100406D7D /* XCRemoteSwiftPackageReference "Cleanse" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/square/Cleanse.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.2.6;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C97E0F7D2596207100406D7D /* Cleanse */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C97E0F7C2596207100406D7D /* XCRemoteSwiftPackageReference "Cleanse" */;
+			productName = Cleanse;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = C96A3B56248C7B2A00973E2A /* Project object */;
 }

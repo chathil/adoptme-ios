@@ -10,9 +10,9 @@ import SwiftUI
 
 struct HomeScreen: View {
     @EnvironmentObject private var userData: UserData
+    let currentUser: User
     @State private var navBarHidden: Bool = true
     @State private var action: Int? = 0
-    let currentUser = User(firstName: "Abdul", lastName: "Chathil", photo: "me", email: "chathil98@gmail.com")
     var body: some View {
         NavigationView {
             List {
@@ -38,6 +38,6 @@ struct HomeScreen: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        HomeScreen().environmentObject(UserData())
+        HomeScreen(currentUser: User(firstName: "John", lastName: "Doe", photo: "me", email: "abdc@fg.com")).environmentObject(UserData())
     }
 }

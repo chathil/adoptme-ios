@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-
+// No longer work
 public struct ListSeparatorStyleNoneModifier: ViewModifier {
     public func body(content: Content) -> some View {
         content.onAppear {

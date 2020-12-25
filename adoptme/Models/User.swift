@@ -6,7 +6,7 @@
 //  Copyright © 2020 Abdul Chathil. All rights reserved.
 //
 
-import Foundation
+import Cleanse
 
 struct User {
     let firstName: String
@@ -18,4 +18,14 @@ struct User {
         }
     }
     let email: String
+}
+
+extension User {
+    struct Module: Cleanse.Module {
+        static func configure(binder: Binder<Unscoped>) {
+            binder.bind(User.self).to {
+                User(firstName: "John", lastName: "Doe", photo: "me", email: "abcd@ef.com")
+            }
+        }
+    }
 }

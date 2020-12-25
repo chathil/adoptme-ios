@@ -7,12 +7,28 @@
 //
 
 import SwiftUI
+import Cleanse
 
 @main
-struct PackageTestAppApp: App {
+class AdoptmeApp: App {
+    var userData: UserData!
+    var user: User!
+    required init() {
+        let propertyInjector = try? ComponentFactory.of(AppComponent.self).build(())
+        propertyInjector?.injectProperties(into: self)
+        precondition(userData != nil)
+        precondition(user != nil)
+    }
     var body: some Scene {
         WindowGroup {
-            HomeScreen().environmentObject(UserData())
+            HomeScreen(currentUser: user).environmentObject(userData)
         }
+    }
+}
+
+extension AdoptmeApp {
+    func injectProperties(_ userData: UserData, _ user: User) {
+        self.userData = userData
+        self.user = user
     }
 }

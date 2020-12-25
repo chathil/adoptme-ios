@@ -38,6 +38,6 @@ struct AboutScreen: View {
 
 struct AboutScreen_Previews: PreviewProvider {
     static var previews: some View {
-        AboutScreen(user: User(firstName: "Abdul", lastName: "Chathil", photo: "me", email: "chathil98@gmail.com"))
+        AboutScreen(user: User(firstName: "John", lastName: "Doe", photo: "me", email: "abcd@ef.com"))
     }
 }

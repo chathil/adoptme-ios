@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:/Volumes/Shared/IDCAMP2020/Course2/adoptme/adoptme.xcodeproj">
+      location = "self:">
    </FileRef>
 </Workspace>

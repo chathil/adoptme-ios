@@ -1,0 +1,8 @@
+lane :tests do
+  run_tests(project: "adoptme.xcodeproj",
+            devices: ["iPhone 11 Pro"],
+            scheme: "adoptme",
+	          clean: false,
+	          code_coverage: true,
+            skip_build: false)
+end

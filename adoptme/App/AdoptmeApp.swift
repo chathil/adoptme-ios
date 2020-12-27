@@ -13,6 +13,7 @@ import Cleanse
 class AdoptmeApp: App {
     var userData: UserData!
     var user: User!
+    
     required init() {
         let propertyInjector = try? ComponentFactory.of(AppComponent.self).build(())
         propertyInjector?.injectProperties(into: self)

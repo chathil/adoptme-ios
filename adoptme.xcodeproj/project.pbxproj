@@ -13,7 +13,6 @@
 		C92994DA248E51DF008A3A2C /* AboutScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C92994D9248E51DF008A3A2C /* AboutScreen.swift */; };
 		C92994DC248E51FD008A3A2C /* PetDetailScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C92994DB248E51FD008A3A2C /* PetDetailScreen.swift */; };
 		C92994DE248E6E72008A3A2C /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C92994DD248E6E72008A3A2C /* User.swift */; };
-		C92994E0248E708A008A3A2C /* Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = C92994DF248E708A008A3A2C /* Ext.swift */; };
 		C92D23A32595CF930089AAEC /* AdoptmeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C92D23A22595CF930089AAEC /* AdoptmeApp.swift */; };
 		C94637AC248D4F8B0083F7AA /* pets.json in Resources */ = {isa = PBXBuildFile; fileRef = C94637AB248D4F8B0083F7AA /* pets.json */; };
 		C94637B7248D50400083F7AA /* cat-wiley.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C94637AD248D503F0083F7AA /* cat-wiley.jpg */; };
@@ -61,7 +60,6 @@
 		C92994D9248E51DF008A3A2C /* AboutScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutScreen.swift; sourceTree = "<group>"; };
 		C92994DB248E51FD008A3A2C /* PetDetailScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetDetailScreen.swift; sourceTree = "<group>"; };
 		C92994DD248E6E72008A3A2C /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		C92994DF248E708A008A3A2C /* Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ext.swift; sourceTree = "<group>"; };
 		C92D23A22595CF930089AAEC /* AdoptmeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdoptmeApp.swift; sourceTree = "<group>"; };
 		C94637AB248D4F8B0083F7AA /* pets.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = pets.json; sourceTree = "<group>"; };
 		C94637AD248D503F0083F7AA /* cat-wiley.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "cat-wiley.jpg"; sourceTree = "<group>"; };
@@ -102,14 +100,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		C92994D1248E11A5008A3A2C /* Ext */ = {
-			isa = PBXGroup;
-			children = (
-				C92994DF248E708A008A3A2C /* Ext.swift */,
-			);
-			path = Ext;
-			sourceTree = "<group>";
-		};
 		C92D23A72595DCDC0089AAEC /* SupportingFiles */ = {
 			isa = PBXGroup;
 			children = (
@@ -216,7 +206,6 @@
 		C97E646A248D418600BC15AC /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				C92994D1248E11A5008A3A2C /* Ext */,
 				C97E6469248D3CCA00BC15AC /* Screens */,
 				C97E646B248D418D00BC15AC /* Components */,
 			);
@@ -340,7 +329,6 @@
 				C92994DC248E51FD008A3A2C /* PetDetailScreen.swift in Sources */,
 				C9E41AAC248E96E0008652F0 /* PetSize.swift in Sources */,
 				C92994DA248E51DF008A3A2C /* AboutScreen.swift in Sources */,
-				C92994E0248E708A008A3A2C /* Ext.swift in Sources */,
 				C9E41AAA248E878A008652F0 /* PetHeader.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -480,7 +468,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.chathil.Exam1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -500,7 +488,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.chathil.Exam1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

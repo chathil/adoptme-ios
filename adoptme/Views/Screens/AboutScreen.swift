@@ -9,6 +9,7 @@
 import SwiftUI
 
 struct AboutScreen: View {
+    @State private var navBarHidden: Bool = false
     let user: User
     var body: some View {
         ScrollView {
@@ -30,8 +31,7 @@ struct AboutScreen: View {
                 }.padding(.leading, 16)
                 Image("illustration-dog").resizable().scaledToFill().frame(width: 216, height: 216).padding(.leading, 16)
                 Spacer()
-                    .navigationBarTitle(Text("User Detail")).navigationBarHidden(false)
-            }.edgesIgnoringSafeArea(.top)
+            }.navigationBarTitle(Text("User Detail")).navigationBarHidden( self.navBarHidden)
         }
     }
 }

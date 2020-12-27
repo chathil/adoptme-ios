@@ -10,29 +10,37 @@ import SwiftUI
 
 struct HomeScreen: View {
     @EnvironmentObject private var userData: UserData
+    
     let currentUser: User
     @State private var navBarHidden: Bool = true
-    @State private var action: Int? = 0
+    
     var body: some View {
         NavigationView {
-            List {
-                AccountSnippet(user: currentUser).padding(EdgeInsets(top: 32, leading: 0, bottom: 0, trailing: 0))
-                PetHeader()
-                ForEach(userData.pets) { pet in
-                    NavigationLink(destination: PetDetailScreen(pet: pet).navigationBarTitle(Text("")).navigationBarBackButtonHidden(false)) {
-                        PetRow(pet: pet)
+            ScrollView {
+                LazyVStack {
+                    AccountSnippet(user: currentUser).padding(.top, 32)
+                    PetHeader()
+                    ForEach(userData.pets) { pet in
+                        NavigationLink(destination: PetDetailScreen(pet: pet).navigationBarTitle(Text("")).navigationBarBackButtonHidden(false)) {
+                            PetRow(pet: pet)
+                        }.frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
+                        .listRowInsets(EdgeInsets())
+                        .background(Color.white)
                     }
-                }
-            }.environment(\.defaultMinListRowHeight, 132).listSeparatorStyleNone()
-                .navigationBarTitle("")
-                .navigationBarHidden(self.navBarHidden)
-                .onReceive(NotificationCenter.default.publisher(for: UIApplication.willEnterForegroundNotification)) { _ in
-                    self.navBarHidden = true
+                }.padding(.horizontal)
+            }
+            .navigationBarTitle("")
+            .navigationBarHidden(self.navBarHidden)
+            .onReceive(NotificationCenter.default.publisher(for: UIApplication.willEnterForegroundNotification)) { _ in
+                self.navBarHidden = true
             }
             .onReceive(NotificationCenter.default.publisher(for: UIApplication.willResignActiveNotification)) { _ in
                 self.navBarHidden = false
             }
-        }.phoneOnlyStackNavigationView()
+            if UIDevice.current.userInterfaceIdiom == .pad {
+                PetDetailScreen(pet: userData.pets[0])
+                }
+            }
     }
 }
 

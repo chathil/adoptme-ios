@@ -10,6 +10,7 @@ import SwiftUI
 
 struct PetDetailScreen: View {
     @EnvironmentObject private var userData: UserData
+    @State private var navBarHidden: Bool = true
     let pet: Pet
     var petIndex: Int {
         userData.pets.firstIndex(where: { $0.id == pet.id })!
@@ -36,7 +37,7 @@ struct PetDetailScreen: View {
                 }.padding(EdgeInsets(top: 0, leading: 16, bottom: 0, trailing: 16))
                 Text(pet.desc).font(.body).padding()
             }
-        }.edgesIgnoringSafeArea(.top)
+        }.edgesIgnoringSafeArea(.top).navigationBarHidden(false)
     }
 }
 

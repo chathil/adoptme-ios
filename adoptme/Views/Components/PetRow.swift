@@ -23,7 +23,8 @@ struct PetRow: View {
                 Text(pet.name)
                     .font(.headline)
                     .fontWeight(.bold)
-                Text(pet.location)
+                    .foregroundColor(.black)
+                Text(pet.location).foregroundColor(.black)
                 HStack {
                     LikeButton(isLiked: self.userData.pets[self.petIndex].isLiked).padding().onTapGesture {
                         self.userData.pets[self.petIndex].isLiked.toggle()
